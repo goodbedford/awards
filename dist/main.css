@@ -325,12 +325,14 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 46%;
+          flex: 1 1 46%;
   margin: 10px 10px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column;
-  width: 46%; }
+          flex-direction: column; }
 
 .thumbnail-wrapper {
   display: -webkit-box;
@@ -365,7 +367,9 @@ body {
 */
 @media screen and (min-width: 1020px) {
   .thumbnail {
-    width: calc(33.3333% - 20px); } }
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 calc(33.3333% - 20px);
+            flex: 0 1 calc(33.3333% - 20px); } }
 
 .flex-nav {
   -ms-flex-line-pack: start;

@@ -1,9 +1,9 @@
 .thumbnail {
   display: flex;
-  //flex:0;
+  flex:1 1 46%;
   margin: 10px 10px;
   flex-direction: column;
-  width: 46%;
+  //width: 46%;
 }
 .thumbnail-wrapper {
   display: flex;
@@ -32,6 +32,7 @@
 */
 @media screen and (min-width: 1020px){
   .thumbnail {
-    width: calc(33.3333% - 20px);
+    //width: calc(33.3333% - 20px);
+    flex: 0 1  calc(33.3333% - 20px);
   }
 }
