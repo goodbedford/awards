@@ -1,0 +1,32 @@
+
+
+.flex-content-wrapper {
+  //align-items: center;
+  background-color: $color-gray;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 480px) {
+  //.flex-content-wrapper {
+  //  //flex-direction: row;
+  //}
+}
+
+.flex-header-wrapper {
+  //margin-bottom: 65px;
+}
+.flex-thumbnail-wrapper {
+  display: flex;
+  flex:1;
+  margin: 10px 0px 20px 0px;
+  //width: 100%;
+  justify-content: space-around;
+}
+
+.flex-wrapper {
+  display:flex;
+  flex-direction: column;
+  overflow: hidden;
+  //position: relative;
+  //z-index: 10;
+}
