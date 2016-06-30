@@ -32,6 +32,9 @@
   font-size: $text-md;
   padding: 10px 0px;
 }
+.post__content--desktop {
+  display: none;
+}
 .post__header {
   margin: 0px 5%;
   font-weight: 300;
@@ -70,7 +73,11 @@
   .post__img-wrapper {
     padding-right: 10px;
   }
+  .post__content--desktop {
+    display: flex;
+  }
   .post__text--last-row {
     flex: 0 0 auto;
   }
+
 }
