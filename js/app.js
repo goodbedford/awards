@@ -5,6 +5,7 @@
 	var dropDownNav = document.querySelector(".flex-nav");
 	var body = document.querySelector("body");
 	var menuRow = document.querySelector(".header__content--flex-menu-row");
+
 	function toggleDropdown(event, target) {
 		var classes = Array.prototype.slice.call(target.classList);
 		console.log("classes", classes);
@@ -31,7 +32,9 @@
 
 	}
 
-	menuToggle.addEventListener("click", toggleDropdown.bind(menuToggle, event, dropDownNav));
+	if(menuToggle) {
+		menuToggle.addEventListener("click", toggleDropdown.bind(menuToggle, event, dropDownNav));
+	}
 
 	window.addEventListener("scroll", function(event) {
 		console.log("scrollling");
