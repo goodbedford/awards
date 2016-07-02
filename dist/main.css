@@ -61,7 +61,8 @@ body {
   -webkit-transition: all 0.5s;
   transition: all 0.5s; }
   .header__btn:hover {
-    background-color: #4b4b4b; }
+    background-color: #4b4b4b;
+    color: #fff; }
 
 .header__btn--isOpen {
   margin-left: -125px; }

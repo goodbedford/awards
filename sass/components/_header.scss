@@ -17,6 +17,7 @@
   transition: all 0.5s;
   &:hover {
     background-color: $color-dark-lite;
+    color: $color-white;
   }
 }
 .header__btn--isOpen {
