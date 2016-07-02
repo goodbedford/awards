@@ -5,7 +5,7 @@
 	var dropDownNav = document.querySelector(".flex-nav");
 	var body = document.querySelector("body");
 	var menuRow = document.querySelector(".header__content--flex-menu-row");
-
+	var red = "red";
 	function toggleDropdown(event, target) {
 		var classes = Array.prototype.slice.call(target.classList);
 		console.log("classes", classes);
@@ -23,8 +23,11 @@
 		}
 		if( hasOpenClass(classes)) {
 			target.classList.remove("flex-nav--isOpen");
+			this.classList.remove("header__btn--isOpen");
 		} else {
 			target.classList.add("flex-nav--isOpen");
+			this.classList.add("header__btn--isOpen");
+
 		}
 	}
 

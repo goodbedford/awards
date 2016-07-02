@@ -58,10 +58,13 @@ body {
   padding: 0px 20px;
   text-decoration: none;
   text-transform: uppercase;
-  -webkit-transition: background-color 0.5s;
-  transition: background-color 0.5s; }
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s; }
   .header__btn:hover {
     background-color: #4b4b4b; }
+
+.header__btn--isOpen {
+  margin-left: -125px; }
 
 .header__btn--nav {
   background-color: transparent;
@@ -146,6 +149,10 @@ body {
 */
 @media screen and (min-width: 1100px) {
   .header__btn--nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .header__btn--site {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; } }
