@@ -15,8 +15,8 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      "js/**/*.js",
-      'spec/*Spec.js'
+      'js/**/*.js',
+      'spec/**/*Spec.js'
     ],
 
 
@@ -28,14 +28,14 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      "js/**/*.js": ["coverage"]
+      'js/**/*.js': ['coverage']
     },
 
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress', "coverage"],
+    reporters: ['spec', 'coverage'],
 
     // optionally, configure the reporter
     coverageReporter: {
@@ -43,7 +43,7 @@ module.exports = function(config) {
       dir : 'spec/'
     },
 
-    plugins: ["karma-jasmine", "karma-chrome-launcher", "karma-coverage"],
+    plugins: ['karma-jasmine', 'karma-chrome-launcher', 'karma-coverage', 'karma-spec-reporter'],
 
     // web server port
     port: 9876,

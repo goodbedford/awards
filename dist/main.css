@@ -73,8 +73,6 @@ body {
   display: none;
   font-size: 14px;
   font-weight: 300; }
-  .header__btn--nav:hover {
-    background-color: #fff; }
 
 .header__btn--site {
   background-color: #66a8a1;
