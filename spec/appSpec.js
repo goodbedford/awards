@@ -1,18 +1,43 @@
 describe("App", function () {
-	var btn, dropDownNav;
+
 
 	describe("toggleDropdown", function () {
+		var menuToggle, dropDownNav;
+
 
 		beforeEach(function() {
-			btn = document.createElement("a");
-			btn.classList.add("menu-toggle");
-			dropDownNav = document.createElement("ul");
+			fixture.setBase('spec/fixtures');
+			// btn = document.createElement("a");
+			// btn.classList.add("menu-toggle");
+			// dropDownNav = document.createElement("ul");
 		});
 
-		it("should return false if missing open class", function() {
-			expect(toggleDropdown("click", dropDownNav)).toEqual(false);
-
+		beforeEach(function() {
+			this.nav = fixture.load('nav.html');
 		});
+		
+		afterEach(function() {
+			fixture.cleanup();
+		});
+		
+		beforeEach(function() {
+			menuToggle = fixture.el.querySelector(".menu-toggle");
+			dropDownNav = fixture.el.querySelector(".flex-nav");
+		});
+
+		it("should have menuToggle btn", function() {
+			// console.log("gbtest" ,menuToggle);
+			expect(menuToggle.nodeName).toBe('A');
+			// expect(menuToggle.classList.length).toBe(2);
+		});
+
+		it("should call toggleDropdown when  menuToggle clicked", function() {
+			menuToggle.click();
+			toggleDropdown.bind(menuToggle, "click", dropDownNav);
+			// console.log("gbtest" ,menuToggle);
+
+			expect(dropDownNav.classList).toEqual("flex-nav flex-nav--isOpen");
+		})
 	});
 
 
